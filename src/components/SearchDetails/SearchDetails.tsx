@@ -30,7 +30,7 @@ const SearchDetails = () => {
   const audioRef = useRef<HTMLAudioElement>(null);
   const words = useSelector((state: RootStore) => state.dictionary.search);
   const loading = useSelector((state: RootStore) => state.dictionary.loading);
-  const errMSg = useSelector((state: RootStore) => state.dictionary.error);
+  const errMsg = useSelector((state: RootStore) => state.dictionary.error);
   const dispatch = useDispatch();
 
   if (loading) {
@@ -39,6 +39,10 @@ const SearchDetails = () => {
         <img src={spinner} alt="loading img" />
       </div>
     );
+  }
+
+  if (errMsg) {
+    return <h1 style={{ color: "red", textAlign: "center" }}>{errMsg}</h1>;
   }
 
   if (!words) {
@@ -51,7 +55,6 @@ const SearchDetails = () => {
 
   return (
     <div>
-      {errMSg}
       {words?.map((item: SearchState, index: number) => {
         const { word, meanings, phonetics } = item;
         return (

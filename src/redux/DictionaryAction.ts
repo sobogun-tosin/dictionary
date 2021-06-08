@@ -20,16 +20,9 @@ export const searchWords =
       }
     } catch (err) {
       console.log(err);
-      errorMsg(err.message);
+      dispatch({
+        type: ERROR,
+        payload: "sorry word not found",
+      });
     }
   };
-
-const errorMsg = (errMsg: string) => (dispatch: Dispatch<DictionaryAction>) => {
-  const timeout = setTimeout(() => {
-    dispatch({
-      type: ERROR,
-      payload: errMsg,
-    });
-  }, 3000);
-  return () => clearTimeout(timeout);
-};
