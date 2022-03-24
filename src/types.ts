@@ -2,19 +2,31 @@ export const LOADING = "LOADING";
 export const ERROR = "ERROR";
 export const SEARCH = "SEARCH";
 
+export interface Meaning {
+  partOfSpeech: string;
+  definitions: Definition[];
+}
+
+export interface Definition {
+  definition: string;
+  synonyms: string[];
+}
+
+export interface Phonetic {
+  text: string;
+  audio: string;
+}
+
+export interface InitialState {
+  loading: boolean;
+  error: string;
+  search: SearchState[];
+}
+
 export interface SearchState {
   word: string;
-  phonetics: {
-    text: string;
-    audio: string;
-  }[];
-  meanings: {
-    partOfSpeech: string;
-    definitions: {
-      definition: string;
-      synonyms: string[];
-    }[];
-  }[];
+  phonetics: Phonetic[];
+  meanings: Meaning[];
 }
 
 interface SearchAction {

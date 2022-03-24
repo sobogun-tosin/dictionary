@@ -1,0 +1,23 @@
+.Home {
+  &_container {
+    width: 60%;
+    margin: 2rem auto;
+  }
+
+  &_speech {
+    font-size: 14px;
+    text-align: center;
+  }
+
+  &_loading {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 1rem;
+
+    img {
+      border-radius: 50%;
+      width: 200px;
+    }
+  }
+}

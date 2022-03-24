@@ -1,0 +1,21 @@
+.Banner {
+  position: relative;
+  background: black;
+
+  &_img {
+    width: 100%;
+    height: 300px;
+    object-fit: fill;
+    opacity: 0.5;
+  }
+
+  &_text {
+    position: absolute;
+    font-size: 3rem;
+    font-weight: 700;
+    font-family: cursive;
+    letter-spacing: 2.5px;
+    top: 20px;
+    left: 50px;
+  }
+}

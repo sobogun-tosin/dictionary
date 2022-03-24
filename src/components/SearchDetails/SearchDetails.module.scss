@@ -1,0 +1,49 @@
+.SearchDetails {
+  margin-top: 3rem;
+
+  &_error {
+    display: grid;
+    align-items: center;
+    justify-content: center;
+
+    &_text {
+      color: red;
+      margin: 0;
+    }
+
+    &_img {
+      width: 400px;
+      height: 350px;
+    }
+  }
+
+  &_title {
+    text-transform: capitalize;
+  }
+  &_phonetic {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  &_synonyms {
+    i {
+      cursor: pointer;
+      padding-left: 5px;
+      &:hover {
+        color: rgb(93, 173, 240);
+      }
+      &:active {
+        color: rgb(13, 155, 13);
+      }
+    }
+  }
+  &_no_synonyms {
+    color: rgb(153, 153, 153);
+    display: inline;
+  }
+
+  &_play {
+    font-size: 1.5rem;
+    cursor: pointer;
+  }
+}

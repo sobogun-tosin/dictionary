@@ -1,13 +1,15 @@
-import { DictionaryAction, ERROR, LOADING, SEARCH, SearchState } from "./types";
+import {
+  DictionaryAction,
+  ERROR,
+  InitialState,
+  LOADING,
+  SEARCH,
+} from "../types";
 
-interface InitialState {
-  loading: boolean;
-  error: string;
-  search?: SearchState[];
-}
 const initialState: InitialState = {
   loading: false,
   error: "",
+  search: [],
 };
 const DictionaryReducer = (
   state: InitialState = initialState,

@@ -1,6 +1,6 @@
 import axios from "axios";
 import { Dispatch } from "react";
-import { DictionaryAction, ERROR, LOADING, SEARCH } from "./types";
+import { DictionaryAction, ERROR, LOADING, SEARCH } from "../types";
 
 const url = "https://api.dictionaryapi.dev/api/v2/entries/en_US";
 

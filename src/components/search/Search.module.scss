@@ -1,0 +1,42 @@
+.Search {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  form {
+    padding: 5px 10px;
+    border-radius: 6px;
+    background-color: #f5f5f5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 95%;
+
+    input {
+      width: 100%;
+      font-size: 1.35rem;
+      padding: 10px;
+      outline: none;
+      border: none;
+      background: transparent;
+    }
+  }
+
+  &_btn {
+    color: #2c2c2c;
+    padding: 7px;
+    font-size: 1.5rem;
+    cursor: pointer;
+    border: none;
+  }
+
+  &_mic {
+    font-size: 28px;
+    margin-left: 10px;
+    cursor: pointer;
+
+    &_listen {
+      color: #8bffff;
+    }
+  }
+}
